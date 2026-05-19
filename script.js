@@ -6,8 +6,9 @@ const consultationModal = document.querySelector(".consultation-modal");
 const consultationTriggers = document.querySelectorAll("[data-consultation-trigger]");
 const consultationCloseButtons = document.querySelectorAll("[data-consultation-close]");
 const consultationForms = document.querySelectorAll(".consultation-form");
+const LEAD_CAPTURE_ENDPOINT = "";
 const consultationFirstField = consultationModal?.querySelector(
-  '.consultation-form input:not([type="hidden"]):not(.form-honey)'
+  '.consultation-form input:not([type="hidden"])'
 );
 
 document.querySelectorAll(".reveal").forEach((element) => {
@@ -76,21 +77,21 @@ consultationCloseButtons.forEach((button) => {
 });
 
 consultationForms.forEach((form) => {
-  const nextField = form.querySelector("[data-form-next]");
-  if (nextField) {
-    nextField.value = new URL("thank-you.html", window.location.href).href;
-  }
-
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     if (!form.reportValidity()) return;
 
+    if (!LEAD_CAPTURE_ENDPOINT) {
+      alert(
+        "The form is almost ready. Please connect the Google Apps Script URL first."
+      );
+      return;
+    }
+
     const submitButton = form.querySelector('button[type="submit"]');
     const originalButtonText = submitButton?.textContent;
     const formData = new FormData(form);
-    const payload = Object.fromEntries(formData.entries());
-    const ajaxAction = form.action.replace("formsubmit.co/", "formsubmit.co/ajax/");
 
     if (submitButton) {
       submitButton.disabled = true;
@@ -98,20 +99,11 @@ consultationForms.forEach((form) => {
     }
 
     try {
-      const response = await fetch(ajaxAction, {
+      await fetch(LEAD_CAPTURE_ENDPOINT, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(payload),
+        mode: "no-cors",
+        body: formData,
       });
-
-      const data = await response.json().catch(() => ({}));
-
-      if (!response.ok || data.success === false) {
-        throw new Error(data.message || "FormSubmit could not process the form.");
-      }
 
       window.location.href = new URL("thank-you.html", window.location.href).href;
     } catch (error) {
