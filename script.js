@@ -6,7 +6,8 @@ const consultationModal = document.querySelector(".consultation-modal");
 const consultationTriggers = document.querySelectorAll("[data-consultation-trigger]");
 const consultationCloseButtons = document.querySelectorAll("[data-consultation-close]");
 const consultationForms = document.querySelectorAll(".consultation-form");
-const LEAD_CAPTURE_ENDPOINT = "";
+const LEAD_CAPTURE_ENDPOINT =
+  "https://script.google.com/macros/s/AKfycby_uiGwUdM4_EENsS8nX8uUD_OUaWRvo1UT7t7ck7OWDmmdpmXvVOx8V5of9H4sh2Hw5w/exec";
 const consultationFirstField = consultationModal?.querySelector(
   '.consultation-form input:not([type="hidden"])'
 );
