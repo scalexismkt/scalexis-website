@@ -171,7 +171,7 @@ serviceItems.forEach((item) => {
   });
 
   item.addEventListener("focus", () => {
-    setActiveService(item.dataset.service);
+    if (!isMobileLayout()) setActiveService(item.dataset.service);
   });
 
   item.addEventListener("blur", () => {
@@ -181,12 +181,7 @@ serviceItems.forEach((item) => {
   item.addEventListener("click", () => {
     if (canHover.matches && !isMobileLayout()) return;
 
-    const isActive = item.classList.contains("is-active");
-    if (isActive) {
-      clearActiveService();
-    } else {
-      setActiveService(item.dataset.service);
-    }
+    setActiveService(item.dataset.service);
   });
 });
 
