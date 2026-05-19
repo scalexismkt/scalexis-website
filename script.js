@@ -5,8 +5,10 @@ const mainNavigation = document.querySelector(".main-nav");
 const consultationModal = document.querySelector(".consultation-modal");
 const consultationTriggers = document.querySelectorAll("[data-consultation-trigger]");
 const consultationCloseButtons = document.querySelectorAll("[data-consultation-close]");
-const consultationForm = document.querySelector(".consultation-form");
-const consultationFirstField = consultationModal?.querySelector("input");
+const consultationForms = document.querySelectorAll(".consultation-form");
+const consultationFirstField = consultationModal?.querySelector(
+  '.consultation-form input:not([type="hidden"]):not(.form-honey)'
+);
 
 document.querySelectorAll(".reveal").forEach((element) => {
   const delay = element.getAttribute("data-delay") || "0";
@@ -73,9 +75,11 @@ consultationCloseButtons.forEach((button) => {
   button.addEventListener("click", closeConsultationModal);
 });
 
-consultationForm?.addEventListener("submit", (event) => {
-  event.preventDefault();
-  window.location.href = "thank-you.html";
+consultationForms.forEach((form) => {
+  const nextField = form.querySelector("[data-form-next]");
+  if (nextField) {
+    nextField.value = `${window.location.origin}/thank-you.html`;
+  }
 });
 
 mainNavigation?.querySelectorAll("a").forEach((link) => {

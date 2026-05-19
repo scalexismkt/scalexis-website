@@ -466,6 +466,15 @@ h1 {
   gap: 18px;
 }
 
+.form-honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .consultation-form label {
   display: grid;
   gap: 8px;
