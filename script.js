@@ -78,8 +78,53 @@ consultationCloseButtons.forEach((button) => {
 consultationForms.forEach((form) => {
   const nextField = form.querySelector("[data-form-next]");
   if (nextField) {
-    nextField.value = `${window.location.origin}/thank-you.html`;
+    nextField.value = new URL("thank-you.html", window.location.href).href;
   }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!form.reportValidity()) return;
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton?.textContent;
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
+    const ajaxAction = form.action.replace("formsubmit.co/", "formsubmit.co/ajax/");
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting...";
+    }
+
+    try {
+      const response = await fetch(ajaxAction, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || data.success === false) {
+        throw new Error(data.message || "FormSubmit could not process the form.");
+      }
+
+      window.location.href = new URL("thank-you.html", window.location.href).href;
+    } catch (error) {
+      alert(
+        "Sorry, the form could not be submitted right now. Please try again in a moment."
+      );
+
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
+    }
+  });
 });
 
 mainNavigation?.querySelectorAll("a").forEach((link) => {
