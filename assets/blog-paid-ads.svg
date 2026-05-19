@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 580" role="img" aria-labelledby="title desc">
+  <title id="title">Paid ads dashboard</title>
+  <desc id="desc">A performance marketing dashboard with campaign charts and conversion data.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#15151d"/>
+      <stop offset="0.52" stop-color="#31246d"/>
+      <stop offset="1" stop-color="#7261f4"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".94"/>
+      <stop offset="1" stop-color="#d9d4ff" stop-opacity=".76"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="580" rx="44" fill="url(#bg)"/>
+  <circle cx="805" cy="92" r="142" fill="#ffffff" opacity=".09"/>
+  <circle cx="142" cy="485" r="170" fill="#ff784f" opacity=".16"/>
+  <rect x="84" y="82" width="792" height="416" rx="34" fill="#0a0a12" opacity=".45"/>
+  <rect x="126" y="125" width="260" height="330" rx="24" fill="url(#card)"/>
+  <rect x="422" y="125" width="412" height="148" rx="24" fill="#ffffff" opacity=".88"/>
+  <rect x="422" y="307" width="412" height="148" rx="24" fill="#ffffff" opacity=".88"/>
+  <rect x="164" y="168" width="112" height="18" rx="9" fill="#17171f" opacity=".7"/>
+  <rect x="164" y="216" width="178" height="78" rx="18" fill="#7261f4"/>
+  <rect x="164" y="322" width="64" height="92" rx="15" fill="#17171f" opacity=".74"/>
+  <rect x="246" y="276" width="64" height="138" rx="15" fill="#ff784f"/>
+  <rect x="328" y="244" width="34" height="170" rx="15" fill="#17171f" opacity=".34"/>
+  <path d="M466 224 C518 174 555 237 604 205 C646 178 683 158 744 176 C773 184 790 201 808 214" fill="none" stroke="#7261f4" stroke-width="12" stroke-linecap="round"/>
+  <path d="M466 399 C518 352 556 408 610 374 C662 341 713 326 806 352" fill="none" stroke="#ff784f" stroke-width="12" stroke-linecap="round"/>
+  <g fill="#17171f" opacity=".68">
+    <rect x="466" y="158" width="126" height="14" rx="7"/>
+    <rect x="466" y="334" width="150" height="14" rx="7"/>
+    <rect x="466" y="248" width="66" height="9" rx="4"/>
+    <rect x="466" y="428" width="92" height="9" rx="4"/>
+  </g>
+</svg>

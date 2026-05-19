@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 580" role="img" aria-labelledby="title desc">
+  <title id="title">SEO growth map</title>
+  <desc id="desc">Search visibility, keyword clusters, and rising organic growth lines.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7f7f7"/>
+      <stop offset=".48" stop-color="#d9d4ff"/>
+      <stop offset="1" stop-color="#7261f4"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="580" rx="44" fill="url(#bg)"/>
+  <rect x="80" y="70" width="800" height="440" rx="36" fill="#fff" opacity=".72"/>
+  <rect x="132" y="126" width="338" height="56" rx="28" fill="#111"/>
+  <circle cx="166" cy="154" r="12" fill="#7261f4"/>
+  <rect x="194" y="145" width="188" height="18" rx="9" fill="#fff" opacity=".88"/>
+  <g fill="none" stroke-linecap="round" stroke-width="11">
+    <path d="M148 404 C242 344 294 376 364 294 C434 212 512 250 604 168 C672 108 746 126 816 96" stroke="#7261f4"/>
+    <path d="M148 444 C253 397 322 420 408 338 C493 257 571 306 662 220 C718 168 764 164 824 142" stroke="#111" opacity=".2"/>
+  </g>
+  <g fill="#111">
+    <circle cx="148" cy="404" r="16"/>
+    <circle cx="364" cy="294" r="16"/>
+    <circle cx="604" cy="168" r="16"/>
+    <circle cx="816" cy="96" r="16"/>
+  </g>
+  <g opacity=".74">
+    <rect x="142" y="226" width="140" height="34" rx="17" fill="#111"/>
+    <rect x="310" y="226" width="106" height="34" rx="17" fill="#7261f4"/>
+    <rect x="444" y="226" width="176" height="34" rx="17" fill="#111"/>
+    <rect x="648" y="226" width="126" height="34" rx="17" fill="#7261f4"/>
+  </g>
+  <g fill="#111" opacity=".28">
+    <rect x="142" y="474" width="96" height="12" rx="6"/>
+    <rect x="270" y="474" width="160" height="12" rx="6"/>
+    <rect x="464" y="474" width="118" height="12" rx="6"/>
+  </g>
+</svg>

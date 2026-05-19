@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scalexis Hero</title>
+    <link rel="icon" type="image/png" href="assets/scalexis-favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260518-18" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="site-header reveal header-reveal" data-delay="0">
+        <a class="brand" href="index.html" aria-label="Scalexis home">
+          <img src="assets/scalexis-logo-wordmark.png" alt="Scalexis" />
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+          <a href="index.html" class="nav-link">
+            <span class="nav-track">
+              <span>Home</span>
+              <span>Home</span>
+            </span>
+          </a>
+          <a href="#about" class="nav-link">
+            <span class="nav-track">
+              <span>About</span>
+              <span>About</span>
+            </span>
+          </a>
+          <a href="#services" class="nav-link">
+            <span class="nav-track">
+              <span>Services</span>
+              <span>Services</span>
+            </span>
+          </a>
+          <a href="#blogs" class="nav-link">
+            <span class="nav-track">
+              <span>Blogs</span>
+              <span>Blogs</span>
+            </span>
+          </a>
+          <a href="contact.html" class="nav-link">
+            <span class="nav-track">
+              <span>Contact</span>
+              <span>Contact</span>
+            </span>
+          </a>
+          <a href="#consultation" class="nav-cta" data-consultation-trigger>Get started</a>
+        </nav>
+      </header>
+
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/hero-motion.avif" alt="" />
+          <div class="hero-tint"></div>
+        </div>
+
+        <div class="hero-inner">
+          <div class="hero-title-wrap reveal" data-delay="130">
+            <h1 id="hero-title">
+              Digital Marketing for Brands Tired of Burning Ad Budget.
+            </h1>
+          </div>
+
+          <div class="hero-bottom reveal" data-delay="300">
+            <p>
+              We work with brands that are done with random boosting, confusing
+              reports, and "sir reach badh gaya" as the final answer.
+            </p>
+
+            <a class="hero-link" href="#consultation" data-consultation-trigger>
+              <span>Let's Fix Your Marketing</span>
+              <span class="arrow-track" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+                </svg>
+              </span>
+              <span class="line line-front"></span>
+              <span class="line line-back"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="about-inner section-reveal">
+          <h2 id="about-title" class="about-heading text-hover-line">
+            More Than Marketing. A Growth Partner Built for ROI.
+          </h2>
+
+          <p class="about-copy text-hover-line">
+            Scalexis is a ROI-focused digital marketing agency in India.
+            Helping businesses grow through paid ads, SEO, AEO, GEO,
+            social media marketing, and performance marketing. We work with
+            brands that are tired of spending money without knowing what is
+            actually working, so our focus is simple: clear strategy,
+            measurable execution, honest reporting, and marketing that helps
+            turn attention into leads, sales, and real business growth.
+          </p>
+        </div>
+      </section>
+
+      <section class="services-section" id="services" aria-labelledby="services-title">
+        <div class="services-inner section-reveal">
+          <div class="services-kicker">
+            <span>Our</span>
+            <span>Services</span>
+          </div>
+
+          <p class="services-intro">
+            From paid ads and SEO to social media and performance marketing,
+            Scalexis helps your brand reach the right audience with the right
+            strategy. Every service is built to reduce guesswork, improve
+            visibility, and turn marketing efforts into measurable growth.
+          </p>
+
+          <div class="services-list" aria-label="Scalexis services">
+            <button class="service-item" type="button" data-service="paid">
+              <span class="service-number">01.</span>
+              <span class="service-name">Paid Ads Management</span>
+            </button>
+            <button class="service-item" type="button" data-service="seo">
+              <span class="service-number">02.</span>
+              <span class="service-name">SEO, AEO &amp; GEO</span>
+            </button>
+            <button class="service-item" type="button" data-service="social">
+              <span class="service-number">03.</span>
+              <span class="service-name">Social Media Marketing</span>
+            </button>
+            <button class="service-item" type="button" data-service="performance">
+              <span class="service-number">04.</span>
+              <span class="service-name">Performance Marketing</span>
+            </button>
+          </div>
+
+          <div
+            class="service-detail-card"
+            role="dialog"
+            aria-modal="true"
+            aria-live="polite"
+            aria-label="Service details"
+          >
+            <button class="service-card-close" type="button" aria-label="Close service details">
+              <span></span>
+              <span></span>
+            </button>
+
+            <div class="service-detail-panel" data-panel="paid">
+              <p class="service-card-title">Pain points we solve:</p>
+              <ul>
+                <li>High ad spend but low-quality leads</li>
+                <li>Clicks but no conversions</li>
+                <li>Boosted posts with no strategy</li>
+                <li>Confusing campaign structure</li>
+                <li>No proper tracking or reporting</li>
+              </ul>
+              <p>
+                <strong>Best for:</strong> Lead generation, ecommerce sales,
+                local businesses, service providers, and growth-focused brands.
+              </p>
+            </div>
+
+            <div class="service-detail-panel" data-panel="seo">
+              <p class="service-card-title">Pain points we solve:</p>
+              <ul>
+                <li>Website is live but nobody visits</li>
+                <li>Ranking for keywords that do not bring customers</li>
+                <li>Competitors showing up everywhere</li>
+                <li>Blogs written only to "keep website active"</li>
+                <li>No visibility in AI or answer-based search</li>
+              </ul>
+              <p>
+                <strong>Best for:</strong> Local businesses, service brands,
+                consultants, ecommerce stores, and companies that want long-term
+                organic growth.
+              </p>
+            </div>
+
+            <div class="service-detail-panel" data-panel="social">
+              <p class="service-card-title">Pain points we solve:</p>
+              <ul>
+                <li>Random posts with no direction</li>
+                <li>Low engagement despite regular posting</li>
+                <li>Content that looks nice but says nothing</li>
+                <li>No brand consistency</li>
+                <li>No connection between social media and sales</li>
+              </ul>
+              <p>
+                <strong>Best for:</strong> Brands that want stronger visibility,
+                better positioning, and content that supports business growth.
+              </p>
+            </div>
+
+            <div class="service-detail-panel" data-panel="performance">
+              <p class="service-card-title">Pain points we solve:</p>
+              <ul>
+                <li>Add to carts but no purchases</li>
+                <li>Poor return on ad spend</li>
+                <li>Creative fatigue</li>
+                <li>High customer acquisition cost</li>
+                <li>Traffic that does not convert</li>
+                <li>No clear funnel strategy</li>
+              </ul>
+              <p>
+                <strong>Best for:</strong> Ecommerce stores, D2C brands,
+                product-led businesses, and online sellers ready to scale.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-marquee" aria-hidden="true">
+          <div class="services-marquee-track">
+            <span>Services</span>
+            <span>Services</span>
+            <span>Services</span>
+            <span>Services</span>
+          </div>
+          <div class="services-marquee-track">
+            <span>Services</span>
+            <span>Services</span>
+            <span>Services</span>
+            <span>Services</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="work-section" id="how-we-work" aria-labelledby="work-title">
+        <div class="work-inner">
+          <h2 id="work-title" class="work-title">How We Work</h2>
+
+          <div class="work-mobile-line" aria-hidden="true">
+            <span></span>
+          </div>
+
+          <div class="work-wave-wrap" aria-hidden="true">
+            <svg class="work-wave" viewBox="0 0 1200 430" preserveAspectRatio="none">
+              <path
+                class="work-wave-base"
+                d="M60 315 C175 220 250 150 345 185 C450 224 456 310 560 292 C680 270 745 70 855 102 C965 134 1020 190 1140 135"
+                pathLength="1"
+              />
+              <path
+                class="work-wave-draw"
+                d="M60 315 C175 220 250 150 345 185 C450 224 456 310 560 292 C680 270 745 70 855 102 C965 134 1020 190 1140 135"
+                pathLength="1"
+              />
+              <path
+                class="work-wave-current"
+                d="M60 315 C175 220 250 150 345 185 C450 224 456 310 560 292 C680 270 745 70 855 102 C965 134 1020 190 1140 135"
+                pathLength="1"
+              />
+            </svg>
+          </div>
+
+          <div class="work-points">
+            <article class="work-point point-1" data-step="0">
+              <span class="work-dot"></span>
+              <span class="work-line"></span>
+              <div class="work-copy">
+                <span class="work-number">01.</span>
+                <h3>We Understand What Is Actually Going Wrong</h3>
+                <p>
+                  Before suggesting ads, SEO, or content, we understand your
+                  business, audience, offer, competitors, and current marketing
+                  performance.
+                </p>
+              </div>
+            </article>
+
+            <article class="work-point point-2" data-step="1">
+              <span class="work-dot"></span>
+              <span class="work-line"></span>
+              <div class="work-copy">
+                <span class="work-number">02.</span>
+                <h3>We Build a Practical Growth Plan</h3>
+                <p>
+                  We create a digital marketing strategy based on your goals,
+                  budget, and business stage. No copy-paste packages. No "same
+                  strategy for everyone" energy.
+                </p>
+              </div>
+            </article>
+
+            <article class="work-point point-3" data-step="2">
+              <span class="work-dot"></span>
+              <span class="work-line"></span>
+              <div class="work-copy">
+                <span class="work-number">03.</span>
+                <h3>We Launch with Clear Goals</h3>
+                <p>
+                  We set up campaigns with clear objectives, proper audience
+                  targeting, campaign structure, creatives, keywords, and
+                  tracking so your marketing does not run blindly.
+                </p>
+              </div>
+            </article>
+
+            <article class="work-point point-4" data-step="3">
+              <span class="work-dot"></span>
+              <span class="work-line"></span>
+              <div class="work-copy">
+                <span class="work-number">04.</span>
+                <h3>We Track, Optimize, and Improve</h3>
+                <p>
+                  We monitor performance, study what is working, fix what is
+                  not, and keep improving campaigns based on real data.
+                </p>
+              </div>
+            </article>
+
+            <article class="work-point point-5" data-step="4">
+              <span class="work-dot"></span>
+              <span class="work-line"></span>
+              <div class="work-copy">
+                <span class="work-number">05.</span>
+                <h3>We Report Without Confusing You</h3>
+                <p>
+                  We share clear updates on campaign performance, leads,
+                  traffic, conversions, ad spend, and next steps. Simple,
+                  honest, and useful.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section section-reveal" id="faqs" aria-labelledby="faq-title">
+        <div class="faq-inner">
+          <p class="section-kicker">FAQS</p>
+          <h2 id="faq-title" class="faq-title">
+            Got a question?<br />We&rsquo;ve got the answer
+          </h2>
+
+          <div class="faq-list">
+            <article class="faq-item">
+              <button
+                class="faq-question"
+                type="button"
+                aria-expanded="false"
+                aria-controls="faq-answer-1"
+              >
+                <span>Why should I choose Scalexis as my digital marketing agency?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer" id="faq-answer-1" hidden>
+                <p>
+                  Choose Scalexis if you want a digital marketing agency that
+                  focuses on ROI, clarity, and practical growth instead of
+                  vanity metrics. We help businesses improve paid ads, SEO,
+                  social media, and performance marketing with measurable goals.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button
+                class="faq-question"
+                type="button"
+                aria-expanded="false"
+                aria-controls="faq-answer-2"
+              >
+                <span>Can Scalexis help if my ads are not generating good leads?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer" id="faq-answer-2" hidden>
+                <p>
+                  Yes. Scalexis helps businesses improve paid ad performance by
+                  reviewing campaign structure, audience targeting, creatives,
+                  landing pages, and tracking. The goal is to reduce wasted ad
+                  spend and improve lead quality.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button
+                class="faq-question"
+                type="button"
+                aria-expanded="false"
+                aria-controls="faq-answer-3"
+              >
+                <span>Does Scalexis work with ecommerce and D2C brands?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer" id="faq-answer-3" hidden>
+                <p>
+                  Yes. Scalexis offers performance marketing for ecommerce and
+                  D2C brands, including paid ads, retargeting, funnel strategy,
+                  creative testing, and conversion-focused campaign optimization.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button
+                class="faq-question"
+                type="button"
+                aria-expanded="false"
+                aria-controls="faq-answer-4"
+              >
+                <span>Is SEO still important for businesses?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer" id="faq-answer-4" hidden>
+                <p>
+                  Yes. SEO is important because customers still use search
+                  engines to find products, services, and local businesses. With
+                  AEO and GEO, Scalexis also helps brands prepare for
+                  answer-based and AI-powered search visibility.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog-section section-reveal" id="blogs" aria-labelledby="blog-title">
+        <div class="blog-inner">
+          <p class="section-kicker">BLOG</p>
+          <h2 id="blog-title" class="blog-title">Our Blog</h2>
+
+          <div class="blog-grid">
+            <article class="blog-card">
+              <div class="blog-image-wrap">
+                <img
+                  src="assets/blog-paid-ads.svg"
+                  alt="Paid ads dashboard and conversion chart"
+                />
+                <span>Digital Marketing</span>
+              </div>
+              <h3>How to Stop Burning Ad Budget and Start Tracking Real ROI</h3>
+              <div class="blog-meta">
+                <span class="blog-author-mark">AK</span>
+                <span>Ajinkya Khadse</span>
+                <time datetime="2026-05-18">18.05.2026</time>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-image-wrap">
+                <img
+                  src="assets/blog-seo-growth.svg"
+                  alt="SEO visibility growth line and keyword clusters"
+                />
+                <span>SEO</span>
+              </div>
+              <h3>SEO, AEO, and GEO: Why Search Strategy Needs a New Playbook</h3>
+              <div class="blog-meta">
+                <span class="blog-author-mark">AK</span>
+                <span>Ajinkya Khadse</span>
+                <time datetime="2026-05-18">18.05.2026</time>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-image-wrap">
+                <img
+                  src="assets/blog-social-funnel.svg"
+                  alt="Social media funnel from content to conversions"
+                />
+                <span>Performance</span>
+              </div>
+              <h3>From Random Posts to Revenue: Building a Social Media Funnel</h3>
+              <div class="blog-meta">
+                <span class="blog-author-mark">AK</span>
+                <span>Ajinkya Khadse</span>
+                <time datetime="2026-05-18">18.05.2026</time>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer" aria-labelledby="footer-logo">
+        <div class="footer-panel">
+          <div class="footer-main">
+            <div class="footer-brand-block">
+              <a class="footer-logo" href="index.html" id="footer-logo" aria-label="Scalexis home">
+                <img src="assets/scalexis-logo-wordmark.png" alt="Scalexis" />
+              </a>
+
+              <div class="footer-social">
+                <p>SOCIAL MEDIA</p>
+                <div class="footer-social-links" aria-label="Social media links">
+                  <a href="https://www.facebook.com/scalexis.agency/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+                  <a href="https://www.instagram.com/scalexis.agency/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a>
+                  <a href="#" aria-label="LinkedIn">in</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-info">
+              <div class="footer-about">
+                <p class="footer-label">ABOUT</p>
+                <p>
+                  Scalexis is a digital marketing agency in Nagpur helping
+                  businesses turn clicks into customers, traffic into leads, and
+                  ad spend into actual ROI.
+                </p>
+              </div>
+
+              <nav class="footer-nav" aria-label="Footer navigation">
+                <p class="footer-label">NAVIGATION</p>
+                <div class="footer-nav-links">
+                  <a href="index.html">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#blogs">Blog</a>
+                  <a href="contact.html">Contact</a>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>&copy; 2026 - All rights reserved, Developed by Scalexis</p>
+            <div class="footer-legal" aria-label="Legal links">
+              <a href="#">Terms &amp; Condition</a>
+              <span aria-hidden="true">&middot;</span>
+              <a href="#">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div
+        class="consultation-modal"
+        id="consultation"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="consultation-title"
+        hidden
+      >
+        <div class="consultation-backdrop" data-consultation-close></div>
+        <div class="consultation-dialog">
+          <section class="consultation-visual" aria-label="Scalexis growth consultation">
+            <h2>Ready to Stop Guessing and Start Growing?</h2>
+            <div class="consultation-glow" aria-hidden="true"></div>
+          </section>
+
+          <section class="consultation-form-panel">
+            <button
+              class="consultation-close"
+              type="button"
+              aria-label="Close consultation form"
+              data-consultation-close
+            >
+              <span></span>
+              <span></span>
+            </button>
+
+            <p class="consultation-mark" aria-hidden="true">*</p>
+            <h2 id="consultation-title">Get Started</h2>
+
+            <form class="consultation-form" action="thank-you.html" method="get">
+              <label>
+                <span>Full Name</span>
+                <input type="text" name="full-name" autocomplete="name" required />
+              </label>
+
+              <label>
+                <span>Business Name</span>
+                <input type="text" name="business-name" autocomplete="organization" required />
+              </label>
+
+              <label>
+                <span>Phone Number</span>
+                <input type="tel" name="phone-number" autocomplete="tel" required />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+
+              <button type="submit">1:1 Free Marketing Consultation</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js?v=20260518-18"></script>
+  </body>
+</html>
