@@ -194,7 +194,7 @@ a {
 
 .hero-title-wrap {
   position: absolute;
-  top: clamp(178px, 27.5vh, 260px);
+  top: clamp(142px, 21vh, 208px);
   left: 40px;
   width: min(1050px, 73vw);
 }
@@ -212,7 +212,7 @@ h1 {
 .hero-bottom {
   position: absolute;
   left: 40px;
-  bottom: clamp(82px, 12.8vh, 132px);
+  bottom: clamp(52px, 8vh, 94px);
   width: min(470px, 35vw);
 }
 
@@ -347,7 +347,7 @@ h1 {
     linear-gradient(150deg, #050507 0%, #120e2d 42%, #33249b 72%, #7261f4 100%);
 }
 
-.consultation-visual h2 {
+.consultation-headline {
   position: relative;
   z-index: 2;
   max-width: 360px;
@@ -453,7 +453,7 @@ h1 {
   font-size: 58px;
 }
 
-.consultation-form-panel h2 {
+.consultation-title {
   margin: 0 0 34px;
   color: #080808;
   font-size: clamp(42px, 3.5vw, 62px);
@@ -2754,7 +2754,7 @@ h1 {
     border-radius: 18px;
   }
 
-  .consultation-visual h2 {
+  .consultation-headline {
     max-width: 330px;
     font-size: clamp(34px, 9.5vw, 48px);
   }
@@ -2789,7 +2789,7 @@ h1 {
     font-size: 44px;
   }
 
-  .consultation-form-panel h2 {
+  .consultation-title {
     margin-bottom: 24px;
     font-size: clamp(38px, 10vw, 52px);
   }
