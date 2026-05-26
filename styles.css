@@ -1470,6 +1470,12 @@ h1 {
   margin: 0 auto;
 }
 
+.article-content-inner.section-reveal {
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+
 .article-lede {
   margin: 0 0 34px;
   color: #202020;
@@ -1503,12 +1509,39 @@ h1 {
   letter-spacing: -0.06em;
 }
 
+.article-content-inner h3 {
+  margin: 32px 0 10px;
+  color: #171717;
+  font-size: clamp(23px, 1.8vw, 31px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
 .article-content-inner p {
   color: #626262;
   font-size: clamp(17px, 1.1vw, 19px);
   font-weight: 500;
   line-height: 1.58;
   letter-spacing: -0.035em;
+}
+
+.article-content-inner ul,
+.article-content-inner ol {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 28px;
+  padding-left: 24px;
+  color: #626262;
+  font-size: clamp(17px, 1.1vw, 19px);
+  font-weight: 500;
+  line-height: 1.52;
+  letter-spacing: -0.035em;
+}
+
+.article-content-inner li::marker {
+  color: #7261f4;
+  font-weight: 800;
 }
 
 .article-content-inner a {
