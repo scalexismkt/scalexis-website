@@ -1,0 +1,47 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/blog.html", "destination": "/blog", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/thank-you.html", "destination": "/thank-you", "permanent": true },
+    {
+      "source": "/blog-ai-paid-ads-strategy-2026.html",
+      "destination": "/letting-ai-run-ads",
+      "permanent": true
+    },
+    {
+      "source": "/blog-ai-search-optimization-2026.html",
+      "destination": "/why-traffic-is-dropping",
+      "permanent": true
+    },
+    {
+      "source": "/blog-digital-marketing-trends-2026.html",
+      "destination": "/marketing-feels-busy",
+      "permanent": true
+    },
+    {
+      "source": "/blog-ai-in-digital-marketing-2026.html",
+      "destination": "/ai-is-exposing-weak-strategy",
+      "permanent": true
+    },
+    {
+      "source": "/blog-performance-marketing-trends-2026.html",
+      "destination": "/ads-clicks-no-money",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/services", "destination": "/index.html" },
+    { "source": "/form", "destination": "/index.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/thank-you", "destination": "/thank-you.html" },
+    { "source": "/letting-ai-run-ads", "destination": "/blog-ai-paid-ads-strategy-2026.html" },
+    { "source": "/why-traffic-is-dropping", "destination": "/blog-ai-search-optimization-2026.html" },
+    { "source": "/marketing-feels-busy", "destination": "/blog-digital-marketing-trends-2026.html" },
+    { "source": "/ai-is-exposing-weak-strategy", "destination": "/blog-ai-in-digital-marketing-2026.html" },
+    { "source": "/ads-clicks-no-money", "destination": "/blog-performance-marketing-trends-2026.html" }
+  ]
+}

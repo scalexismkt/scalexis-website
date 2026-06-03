@@ -11,6 +11,7 @@ const LEAD_CAPTURE_ENDPOINT =
 const consultationFirstField = consultationModal?.querySelector(
   '.consultation-form input:not([type="hidden"])'
 );
+let pageBeforeConsultation = "/";
 
 document.querySelectorAll(".reveal").forEach((element) => {
   const delay = element.getAttribute("data-delay") || "0";
@@ -50,8 +51,19 @@ const toggleMenu = () => {
 
 menuToggle?.addEventListener("click", toggleMenu);
 
-const openConsultationModal = () => {
+const normalizedPath = () => {
+  const path = window.location.pathname.replace(/\/+$/, "");
+  return path || "/";
+};
+
+const openConsultationModal = ({ updateUrl = false } = {}) => {
   if (!consultationModal) return;
+
+  if (updateUrl && normalizedPath() !== "/form") {
+    pageBeforeConsultation =
+      window.location.pathname + window.location.search + window.location.hash;
+    window.history.pushState({ consultation: true }, "", "/form");
+  }
 
   consultationModal.hidden = false;
   root.classList.add("modal-open");
@@ -59,22 +71,26 @@ const openConsultationModal = () => {
   requestAnimationFrame(() => consultationFirstField?.focus());
 };
 
-const closeConsultationModal = () => {
+const closeConsultationModal = ({ restoreUrl = false } = {}) => {
   if (!consultationModal) return;
 
   consultationModal.hidden = true;
   root.classList.remove("modal-open");
+
+  if (restoreUrl && normalizedPath() === "/form") {
+    window.history.pushState({}, "", pageBeforeConsultation || "/");
+  }
 };
 
 consultationTriggers.forEach((trigger) => {
   trigger.addEventListener("click", (event) => {
     event.preventDefault();
-    openConsultationModal();
+    openConsultationModal({ updateUrl: true });
   });
 });
 
 consultationCloseButtons.forEach((button) => {
-  button.addEventListener("click", closeConsultationModal);
+  button.addEventListener("click", () => closeConsultationModal({ restoreUrl: true }));
 });
 
 consultationForms.forEach((form) => {
@@ -106,7 +122,7 @@ consultationForms.forEach((form) => {
         body: formData,
       });
 
-      window.location.href = new URL("thank-you.html", window.location.href).href;
+      window.location.href = "/thank-you";
     } catch (error) {
       alert(
         "Sorry, the form could not be submitted right now. Please try again in a moment."
@@ -134,9 +150,35 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeMenu();
     clearActiveService();
-    closeConsultationModal();
+    closeConsultationModal({ restoreUrl: true });
   }
 });
+
+const syncCleanRoute = () => {
+  const currentPath = normalizedPath();
+
+  if (currentPath === "/form") {
+    openConsultationModal();
+    return;
+  }
+
+  closeConsultationModal();
+
+  const sectionIdByPath = {
+    "/about": "about",
+    "/services": "services",
+  };
+  const targetId = sectionIdByPath[currentPath];
+  const target = targetId ? document.getElementById(targetId) : null;
+
+  if (target) {
+    requestAnimationFrame(() => {
+      target.scrollIntoView({ block: "start", behavior: "auto" });
+    });
+  }
+};
+
+window.addEventListener("popstate", syncCleanRoute);
 
 document.querySelectorAll(".text-word").forEach((word) => {
   word.addEventListener("pointerdown", () => {
@@ -281,6 +323,7 @@ const animateWorkProgress = () => {
 
 requestAnimationFrame(() => {
   root.classList.add("is-ready");
+  syncCleanRoute();
   syncWorkSection();
   renderedWorkProgress = targetWorkProgress;
   applyWorkProgress(renderedWorkProgress);
