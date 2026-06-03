@@ -5,6 +5,8 @@
     { "source": "/blog.html", "destination": "/blog", "permanent": true },
     { "source": "/contact.html", "destination": "/contact", "permanent": true },
     { "source": "/thank-you.html", "destination": "/thank-you", "permanent": true },
+    { "source": "/terms-and-conditions.html", "destination": "/terms-and-conditions", "permanent": true },
+    { "source": "/privacy-policy.html", "destination": "/privacy-policy", "permanent": true },
     {
       "source": "/blog-ai-paid-ads-strategy-2026.html",
       "destination": "/letting-ai-run-ads",
@@ -38,6 +40,8 @@
     { "source": "/blog", "destination": "/blog.html" },
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/thank-you", "destination": "/thank-you.html" },
+    { "source": "/terms-and-conditions", "destination": "/terms-and-conditions.html" },
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
     { "source": "/letting-ai-run-ads", "destination": "/blog-ai-paid-ads-strategy-2026.html" },
     { "source": "/why-traffic-is-dropping", "destination": "/blog-ai-search-optimization-2026.html" },
     { "source": "/marketing-feels-busy", "destination": "/blog-digital-marketing-trends-2026.html" },
