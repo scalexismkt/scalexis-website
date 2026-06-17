@@ -2788,7 +2788,7 @@ h1 {
   }
 
   .blog-archive-hero {
-    min-height: 54svh;
+    min-height: 44svh;
   }
 
   .article-hero {
@@ -2824,8 +2824,12 @@ h1 {
     padding-right: 24px;
   }
 
+  .blog-listing-section {
+    padding-top: 42px;
+  }
+
   .blog-listing-inner h2 {
-    margin-bottom: 46px;
+    margin-bottom: 34px;
     font-size: clamp(42px, 11vw, 68px);
   }
 
@@ -2891,12 +2895,20 @@ h1 {
 
   .blog-grid {
     grid-template-columns: 1fr;
-    gap: 46px;
+    gap: 34px;
+  }
+
+  .blog-grid-wide {
+    gap: 34px;
   }
 
   .blog-image-wrap {
     margin-bottom: 18px;
     border-radius: 14px;
+  }
+
+  .blog-page .blog-image-wrap {
+    aspect-ratio: 4 / 3;
   }
 
   .blog-card-overlay {
