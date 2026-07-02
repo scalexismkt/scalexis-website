@@ -8,6 +8,11 @@
     { "source": "/terms-and-conditions.html", "destination": "/terms-and-conditions", "permanent": true },
     { "source": "/privacy-policy.html", "destination": "/privacy-policy", "permanent": true },
     {
+      "source": "/blog-ai-max-search-campaigns-2026.html",
+      "destination": "/ai-max-for-search-campaigns",
+      "permanent": true
+    },
+    {
       "source": "/blog-ai-traffic-ga4-2026.html",
       "destination": "/track-ai-traffic-in-ga4",
       "permanent": true
@@ -47,6 +52,7 @@
     { "source": "/thank-you", "destination": "/thank-you.html" },
     { "source": "/terms-and-conditions", "destination": "/terms-and-conditions.html" },
     { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
+    { "source": "/ai-max-for-search-campaigns", "destination": "/blog-ai-max-search-campaigns-2026.html" },
     { "source": "/track-ai-traffic-in-ga4", "destination": "/blog-ai-traffic-ga4-2026.html" },
     { "source": "/letting-ai-run-ads", "destination": "/blog-ai-paid-ads-strategy-2026.html" },
     { "source": "/why-traffic-is-dropping", "destination": "/blog-ai-search-optimization-2026.html" },
